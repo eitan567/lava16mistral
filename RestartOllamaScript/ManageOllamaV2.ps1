@@ -1,6 +1,7 @@
 function Start-Ollama {
     Start-Process "C:\Users\Eitan Baron\AppData\Local\Programs\Ollama\ollama app.exe" -ArgumentList "serve" -NoNewWindow -PassThru
     Write-Host "Ollama service started."
+    return $true
 }
 
 function Check-OllamaResponsive {

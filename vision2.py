@@ -41,4 +41,4 @@ def predict_step(image_paths):
   return preds
 
 
-predict_step(['E:\\images for adobe\\5-9 march included\\large1\\Background. Watercolor pa-374.jpeg']) # ['a woman in a hospital bed with a woman in a hospital bed']
+print(predict_step(['test.png'])) # ['a woman in a hospital bed with a woman in a hospital bed']

@@ -11,8 +11,9 @@ model.to("cuda:0")
 # prepare image and text prompt, using the appropriate prompt template
 url = "https://github.com/haotian-liu/LLaVA/blob/1a91fc274d7c35a9b50b3cb29c4247ae5837ce39/images/llava_v1_5_radar.jpg?raw=true"
 path = "E:/images for adobe/24-31 jan includes/large/Account-1-uploaded-eitan/a woman holding a pet dog in light blue studio bac 289.jpeg"
-image = Image.open(path)#requests.get(url, stream=True).raw)
-prompt = "[INST] <image>\nWhat is shown in this image? [/INST]"
+image = Image.open(path)
+#image = Image.open(requests.get(url, stream=True).raw)
+prompt = "[INST] <image>\nWhat is shown in this image? if there is a person always say the gender not just persons[/INST]"
 
 inputs = processor(prompt, image, return_tensors="pt").to("cuda:0")
 

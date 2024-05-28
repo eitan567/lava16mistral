@@ -1,3 +1,5 @@
+# use python 3.12.3
+
 import rembg
 import numpy as np
 from PIL import Image
